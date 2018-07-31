@@ -1,3 +1,5 @@
+     use servermail;
+
      CREATE TABLE virtual_users (id INT AUTO_INCREMENT NOT NULL, domain_id INT DEFAULT NULL, password VARCHAR(106) NOT NULL, email VARCHAR(120) NOT NULL, INDEX domain_id (domain_id), UNIQUE INDEX email (email), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE =InnoDB;
 
      CREATE TABLE virtual_aliases (id INT AUTO_INCREMENT NOT NULL, domain_id INT DEFAULT NULL, source VARCHAR(100) NOT NULL, destination VARCHAR(100) NOT NULL, INDEX domain_id (domain_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB;
